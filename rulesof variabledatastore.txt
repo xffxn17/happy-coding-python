@@ -1,0 +1,25 @@
+To store data in a variable, Python has the following rules:
+- Variable names can contain letters (A to Z, a to z), digits (0 to 9), and the underscore (_).
+- Variable names cannot start with a digit.
+- No symbols other than underscore are allowed.
+- Variable names cannot contain spaces.
+
+Examples:
+num = Affan      (valid)
+num = 1Affan     (invalid, cannot start with a number)
+roll_no          (valid)
+_rollno          (valid)
+rollno1          (valid)
+roll_1no         (valid)
+If we declare Num and then try to print(num), it will show an error because variable names in Python are case-sensitive; 
+you must use the exact same name as declared.
+now
+If we are not assigning any value to a variable, we should write 'None' in it. 
+This means the variable exists but does not hold any specific value yet.
+
+Example:
+my_variable = None  # This variable is declared but has no value assigned
+
+# Later, you can assign a value to it
+my_variable = 10
+print(my_variable)  # Output: 10
