@@ -70,7 +70,117 @@
   "editor.suggest.showVariables": true, // it will show variable based suggestions
   "editor.suggest.showClasses": true, // it will show class based suggestions
   "editor.suggest.showModules": true, // it will show module based suggestions
-  "editor.suggest.maxVisibleSuggestions": 200, // Show up to 20 suggestions
+  "editor.suggest.maxVisibleSuggestions": 200, // Show up to 200 suggestions
+  // ----------------------
+  // Continue Dev Complete Configuration
+  // ----------------------
+  "continue.models": [
+    {
+      "title": "Auto-Detect Model",
+      "provider": "ollama",
+      "model": "AUTODETECT"
+    },
+    {
+      "title": "Qwen2.5-Coder 1.5B",
+      "provider": "ollama",
+      "model": "qwen2.5-coder:1.5b-base"
+    }
+  ],
+  "continue.tabAutocompleteModel": {
+    "title": "Auto-Select",
+    "provider": "ollama",
+    "model": "AUTODETECT"
+  },
+  "continue.allowAnonymousTelemetry": false,
+  "continue.contextProviders": [
+    {
+      "name": "code",
+      "params": {}
+    },
+    {
+      "name": "docs",
+      "params": {}
+    },
+    {
+      "name": "diff",
+      "params": {}
+    },
+    {
+      "name": "terminal",
+      "params": {}
+    },
+    {
+      "name": "problems",
+      "params": {}
+    }
+  ],
+  "continue.experimental": {
+    "modelRoles": {
+      "inlineEdit": "AUTODETECT",
+      "autocomplete": "AUTODETECT"
+    }
+  },
+  "continue.features": {
+    "masterSwitch": {
+      "enabled": true,
+      "description": "Set to false to disable ALL features at once"
+    },
+    "autoModelSwitching": {
+      "enabled": true,
+      "dynamicSelection": true,
+      "contextAware": true,
+      "languageBasedSwitching": true
+    },
+    "intelligentCompletions": {
+      "enabled": true,
+      "autoTrigger": true,
+      "predictiveText": true,
+      "contextWindow": 100,
+      "multilineSupport": true,
+      "realtimeUpdates": true
+    },
+    "upcomingTextSuggestions": {
+      "enabled": true,
+      "showInline": true,
+      "autoComplete": true,
+      "triggerDelay": 100,
+      "maxSuggestions": 5
+    }
+  },
+  "continue.autoDetection": {
+    "enabled": true,
+    "detectByFileExtension": true,
+    "detectByContent": true,
+    "detectByContext": true,
+    "smartSwitching": true,
+    "fallbackModel": "qwen2.5-coder:1.5b-base"
+  },
+  "continue.completions": {
+    "enabled": true,
+    "inline": true,
+    "realtime": true,
+    "multiline": true,
+    "contextAware": true,
+    "autoAccept": false,
+    "showGhostText": true
+  },
+  "continue.ui": {
+    "showCurrentModel": true,
+    "showModelSwitcher": false,
+    "autoHideUI": true,
+    "minimalistMode": true
+  },
+  "continue.performance": {
+    "smartCaching": true,
+    "preloadModels": true,
+    "optimizeForSpeed": true,
+    "backgroundProcessing": true
+  },
+  "continue.keybindings": {
+    "toggleMasterSwitch": "Ctrl+Alt+X",
+    "forceModelRedetection": "Ctrl+Alt+R",
+    "toggleCompletions": "Ctrl+Alt+C"
+  }
   // ----------------------
   // Git
   // ----------------------
@@ -88,11 +198,13 @@
   "extensions.ignoreRecommendations": false, // Show recommended extensions
   "extensions.autoUpdate": true, // Auto-update extensions
   "github.copilot.enable": {
-    "": false // Enable Copilot in all editors*
+    "*": false // Disable Copilot to avoid conflicts with Continue Dev
   },
-  "github.copilot.inlineSuggest.enable": false, // Show Copilot inline suggestions**
-  "github.copilot.suggest.showEditorCompletions": false, //**
-  "github.copilot.experimental.autocomplete": false, // Use experimental autocomplete**
+  "github.copilot.inlineSuggest.enable": false, // Disable Copilot inline suggestions
+  "github.copilot.suggest.showEditorCompletions": false,
+  "github.copilot.experimental.autocomplete": false,
+  "github.copilot.nextEditSuggestions.enabled": false, // Let Continue Dev handle suggestions
+  "codeium.disableSupercomplete": true, // Disable Codeium to avoid conflicts
   // ----------------------
   // Miscellaneous
   // ----------------------
@@ -166,7 +278,5 @@
     "spwn": "spwn build",
     "pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml",
     "gleam": "gleam run -m $fileNameWithoutExt"
-  },
-  "github.copilot.nextEditSuggestions.enabled": true,
-  "codeium.disableSupercomplete": true // Always show menu bar
+  }
 }
