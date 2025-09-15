@@ -1,0 +1,172 @@
+{
+  // ----------------------
+  // User Interface
+  // ----------------------
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.iconTheme": "material-icon-theme", // Needs Material Icon Theme extension
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.enablePreview": false, // Do not preview files in same tab
+  "workbench.editor.showTabs": "multiple", // Show multiple tabs
+  "window.zoomLevel": 0,
+  "telemetry.telemetryLevel": "off", // No telemetry / crash data sent
+  // ----------------------
+  // Files & Formatting
+  // ----------------------
+  "files.autoSave": "onFocusChange", // Auto-save when switching focus
+  "files.trimTrailingWhitespace": true, // Remove spaces at line end on save
+  "files.insertFinalNewline": true, // Add newline at end of file
+  "files.exclude": {
+    "/_pycache_": true, // Hide Python cache folders
+    "/.git": true, // Hide git folders
+    "/.DS_Store": true // Hide macOS metadata
+  },
+  "editor.formatOnSave": true, // Auto-format on save
+  "editor.formatOnType": true, // Auto-format while typing
+  "editor.tabSize": 4,
+  "editor.detectIndentation": true,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": true,
+  "editor.rulers": [80, 120],
+  // ----------------------
+  // Python
+  // ----------------------
+  "python.defaultInterpreterPath": "C:\\Users\\MOHD AFFAN\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true, // Suggest imports automatically
+  "python.analysis.useLibraryCodeForTypes": true, // Use library types for IntelliSense
+  "python.formatting.provider": "autopep8",
+  "python.formatting.autopep8Args": [
+    "--max-line-length",
+    "120",
+    "--aggressive",
+    "--aggressive"
+  ],
+  "python.linting.enabled": true, // Enable all linting
+  "python.linting.pylintEnabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.testing.unittestEnabled": true,
+  "python.testing.pytestEnabled": true,
+  "python.testing.nosetestsEnabled": false, // Disabled by default
+  // ----------------------
+  // IntelliSense / Auto-Upcoming Text
+  // ----------------------
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false, // Disable suggestions inside comments
+    "strings": true
+  },
+  "editor.suggest.snippetsPreventQuickSuggestions": false, // Allow snippets + suggestions together
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "on",
+  "editor.parameterHints.enabled": true, // Show function parameter hints
+  "editor.inlineSuggest.enabled": true, // Show inline suggestions while typing
+  "editor.hover.enabled": true, // Show hover tooltips
+  "editor.suggest.showWords": true, // it will show word based suggestions
+  "editor.suggest.showSnippets": true, // it will show snippet based suggestions
+  "editor.suggest.showMethods": true, // it will show method based suggestions
+  "editor.suggest.showFunctions": true, // it will show function based suggestions
+  "editor.suggest.showVariables": true, // it will show variable based suggestions
+  "editor.suggest.showClasses": true, // it will show class based suggestions
+  "editor.suggest.showModules": true, // it will show module based suggestions
+  "editor.suggest.maxVisibleSuggestions": 200, // Show up to 20 suggestions
+  // ----------------------
+  // Git
+  // ----------------------
+  "git.autofetch": true, // Fetch from remote automatically
+  "git.confirmSync": false, // Do not ask before syncing
+  // ----------------------
+  // Terminal
+  // ----------------------
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.cursorStyle": "line",
+  // ----------------------
+  // Extensions / AI
+  // ----------------------
+  "extensions.ignoreRecommendations": false, // Show recommended extensions
+  "extensions.autoUpdate": true, // Auto-update extensions
+  "github.copilot.enable": {
+    "": false // Enable Copilot in all editors*
+  },
+  "github.copilot.inlineSuggest.enable": false, // Show Copilot inline suggestions**
+  "github.copilot.suggest.showEditorCompletions": false, //**
+  "github.copilot.experimental.autocomplete": false, // Use experimental autocomplete**
+  // ----------------------
+  // Miscellaneous
+  // ----------------------
+  "explorer.confirmDelete": false, // Delete files without confirmation
+  "breadcrumbs.enabled": true, // Show breadcrumbs
+  "window.menuBarVisibility": "visible",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "code-runner.runInTerminal": false, // Run code in output window
+  "code-runner.clearPreviousOutput": true, // erase the previous output
+  "code-runner.saveFileBeforeRun": true, // Save file before running
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "zig": "zig run",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",
+    "python": "python -u",
+    "perl": "perl",
+    "perl6": "perl6",
+    "ruby": "ruby",
+    "go": "go run",
+    "lua": "lua",
+    "groovy": "groovy",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "shellscript": "bash",
+    "fsharp": "fsi",
+    "csharp": "scriptcs",
+    "vbscript": "cscript //Nologo",
+    "typescript": "ts-node",
+    "coffeescript": "coffee",
+    "scala": "scala",
+    "swift": "swift",
+    "julia": "julia",
+    "crystal": "crystal",
+    "ocaml": "ocaml",
+    "r": "Rscript",
+    "applescript": "osascript",
+    "clojure": "lein exec",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "racket": "racket",
+    "scheme": "csi -script",
+    "ahk": "autohotkey",
+    "autoit": "autoit3",
+    "dart": "dart",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "haskell": "runghc",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "lisp": "sbcl --script",
+    "kit": "kitc --run",
+    "v": "v run",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "sml": "cd $dir && sml $fileName",
+    "mojo": "mojo run",
+    "erlang": "escript",
+    "spwn": "spwn build",
+    "pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml",
+    "gleam": "gleam run -m $fileNameWithoutExt"
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "codeium.disableSupercomplete": true // Always show menu bar
+}
