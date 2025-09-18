@@ -2,8 +2,7 @@
   // ----------------------
   // User Interface
   // ----------------------
-  "workbench.colorTheme": "Default Dark+",
-  "workbench.iconTheme": "material-icon-theme", // Needs Material Icon Theme extension
+  "workbench.colorTheme": "Palenight Italic", // Needs Material Icon Theme extension
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.enablePreview": false, // Do not preview files in same tab
   "workbench.editor.showTabs": "multiple", // Show multiple tabs
@@ -170,5 +169,7 @@
   "github.copilot.nextEditSuggestions.enabled": true,
   "codeium.disableSupercomplete": true,
   "codeium.enableSearch": true,
-  "codeium.languageServerStartupTimeout": 300 // Always show menu bar
+  "codeium.languageServerStartupTimeout": 300,
+  "workbench.iconTheme": "material-icon-theme",
+  "window.autoDetectColorScheme": true // Always show menu bar
 }
